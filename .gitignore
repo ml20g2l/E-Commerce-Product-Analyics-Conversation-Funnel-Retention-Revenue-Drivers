@@ -1,5 +1,15 @@
+# Large raw data files
 *.csv
 *.zip
+*.xlsx
+*.parquet
+
+# Jupyter / Python cache
 .ipynb_checkpoints/
 __pycache__/
+*.pyc
+
+# Environment / secrets
 .env
+*.env
+config.py
