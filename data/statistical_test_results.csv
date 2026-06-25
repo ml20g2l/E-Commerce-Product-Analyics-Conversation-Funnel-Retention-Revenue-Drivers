@@ -1,0 +1,5 @@
+metric,converted_mean,non_converted_mean,mean_difference,t_test_p_value,mannwhitney_p_value,cohens_d,interpretation
+view_count,6.3304137722742375,1.9797655830007157,4.350648189273522,0.0,0.0,0.7784083359944174,Statistically significant
+cart_count,7.580193680639005,1.046635720000776,6.533557960638229,0.0,0.0,1.029761758546637,Statistically significant
+remove_from_cart_count,5.522609997622368,0.7121026421847875,4.81050735543758,0.0,0.0,0.6636544426786427,Statistically significant
+unique_products_viewed,4.8431855131508765,1.7282340197984092,3.1149514933524673,0.0,0.0,0.7712053913568979,Statistically significant
