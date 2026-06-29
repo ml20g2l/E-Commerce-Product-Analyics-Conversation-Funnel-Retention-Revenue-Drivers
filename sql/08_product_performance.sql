@@ -235,3 +235,38 @@ SELECT
 FROM event_price_bands
 GROUP BY price_band, price_band_order
 ORDER BY price_band_order;
+
+/* 4. Session duration conversion analysis */
+DROP TABLE IF EXISTS session_duration_conversion;
+
+CREATE TABLE session_duration_conversion AS
+SELECT
+    CASE
+        WHEN session_duration_minutes < 1 THEN '<1 min'
+        WHEN session_duration_minutes < 3 THEN '1-3 min'
+        WHEN session_duration_minutes < 5 THEN '3-5 min'
+        WHEN session_duration_minutes < 10 THEN '5-10 min'
+        ELSE '10+ min'
+    END AS duration_bucket,
+
+    CASE
+        WHEN session_duration_minutes < 1 THEN 1
+        WHEN session_duration_minutes < 3 THEN 2
+        WHEN session_duration_minutes < 5 THEN 3
+        WHEN session_duration_minutes < 10 THEN 4
+        ELSE 5
+    END AS duration_order,
+
+    COUNT(*) AS sessions,
+    SUM(converted_flag) AS converted_sessions,
+
+    ROUND(
+        SUM(converted_flag)::numeric / COUNT(*),
+        4
+    ) AS conversion_rate
+
+FROM session_journey
+GROUP BY
+    duration_bucket,
+    duration_order
+ORDER BY duration_order;
