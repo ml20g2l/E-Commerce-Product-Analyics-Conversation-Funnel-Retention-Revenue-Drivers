@@ -76,7 +76,15 @@ WITH behaviour_buckets AS (
 
 SELECT
     'View Count' AS behaviour_type,
+    2 AS behaviour_order,
     view_bucket AS behaviour_bucket,
+    CASE view_bucket
+        WHEN '0 views' THEN 1
+        WHEN '1 view' THEN 2
+        WHEN '2-5 views' THEN 3
+        WHEN '6-10 views' THEN 4
+        WHEN '11+ views' THEN 5
+    END AS bucket_order,
     COUNT(*) AS sessions,
     SUM(converted_flag) AS converted_sessions,
     ROUND(SUM(converted_flag)::numeric / NULLIF(COUNT(*), 0), 4) AS conversion_rate
@@ -87,7 +95,15 @@ UNION ALL
 
 SELECT
     'Cart Count' AS behaviour_type,
+    1 AS behaviour_order,
     cart_bucket AS behaviour_bucket,
+    CASE cart_bucket
+        WHEN '0 carts' THEN 1
+        WHEN '1 cart' THEN 2
+        WHEN '2-5 carts' THEN 3
+        WHEN '6-10 carts' THEN 4
+        WHEN '11+ carts' THEN 5
+    END AS bucket_order,
     COUNT(*) AS sessions,
     SUM(converted_flag) AS converted_sessions,
     ROUND(SUM(converted_flag)::numeric / NULLIF(COUNT(*), 0), 4) AS conversion_rate
@@ -98,7 +114,15 @@ UNION ALL
 
 SELECT
     'Remove from Cart Count' AS behaviour_type,
+    4 AS behaviour_order,
     remove_bucket AS behaviour_bucket,
+    CASE remove_bucket
+        WHEN '0 removes' THEN 1
+        WHEN '1 remove' THEN 2
+        WHEN '2-5 removes' THEN 3
+        WHEN '6-10 removes' THEN 4
+        WHEN '11+ removes' THEN 5
+    END AS bucket_order,
     COUNT(*) AS sessions,
     SUM(converted_flag) AS converted_sessions,
     ROUND(SUM(converted_flag)::numeric / NULLIF(COUNT(*), 0), 4) AS conversion_rate
@@ -109,7 +133,15 @@ UNION ALL
 
 SELECT
     'Product Exploration' AS behaviour_type,
+    3 AS behaviour_order,
     product_exploration_bucket AS behaviour_bucket,
+    CASE product_exploration_bucket
+        WHEN '0 products viewed' THEN 1
+        WHEN '1 product viewed' THEN 2
+        WHEN '2-5 products viewed' THEN 3
+        WHEN '6-10 products viewed' THEN 4
+        WHEN '11+ products viewed' THEN 5
+    END AS bucket_order,
     COUNT(*) AS sessions,
     SUM(converted_flag) AS converted_sessions,
     ROUND(SUM(converted_flag)::numeric / NULLIF(COUNT(*), 0), 4) AS conversion_rate
