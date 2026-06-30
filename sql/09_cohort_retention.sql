@@ -74,6 +74,7 @@ cohort_sizes AS (
 
 SELECT
     c.cohort_month,
+    TO_CHAR(c.cohort_month, 'Mon YYYY') AS cohort_month_label,
     c.activity_month,
     c.month_number,
     s.cohort_size,
