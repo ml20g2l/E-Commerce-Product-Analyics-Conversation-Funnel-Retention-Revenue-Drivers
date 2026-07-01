@@ -84,7 +84,7 @@ Visuals include monthly revenue trend, monthly conversion trend, overall convers
 
 ### 2. Customer Behaviour Analysis
 
-![Customer Behaviour](images/customer-behaviour.png)
+![Customer Behaviour](images/customer-behaviour-analysis.png)
 
 This page analyses how customer behaviour intensity relates to purchase conversion.
 
