@@ -236,6 +236,7 @@ FROM event_price_bands
 GROUP BY price_band, price_band_order
 ORDER BY price_band_order;
 
+
 /* 4. Session duration conversion analysis */
 DROP TABLE IF EXISTS session_duration_conversion;
 
