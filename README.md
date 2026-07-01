@@ -66,6 +66,8 @@ This project focuses on the following questions:
 
 ### 1. Executive Overview
 
+![Executive Overview](images/executive-overview.png)
+
 The Executive Overview provides a high-level summary of customer activity, conversion and revenue.
 
 Key metrics include:
@@ -82,6 +84,8 @@ Visuals include monthly revenue trend, monthly conversion trend, overall convers
 
 ### 2. Customer Behaviour Analysis
 
+![Customer Behaviour](images/customer-behaviour.png)
+
 This page analyses how customer behaviour intensity relates to purchase conversion.
 
 Key findings:
@@ -96,6 +100,8 @@ This page uses behaviour buckets to compare conversion rates across views, carts
 ---
 
 ### 3. Brand & Product Performance
+
+![Brand & Product Performance](images/brand-product-performance.png)
 
 This page identifies the brands, products and price bands that contribute most strongly to revenue.
 
@@ -117,6 +123,8 @@ Visuals include:
 
 ### 4. Customer Retention Analysis
 
+![Customer Retention](images/customer-retention-analysis.png)
+
 This page analyses monthly cohort retention.
 
 Key findings:
@@ -131,6 +139,8 @@ A cohort retention heatmap was created using a Power BI matrix with conditional 
 ---
 
 ### 5. Business Recommendations
+
+![Business Recommendations](images/business-recommendations.png)
 
 The final page translates the analysis into business actions.
 
