@@ -1,0 +1,6 @@
+priority,experiment_name,baseline_sessions,baseline_rate,baseline_conversions,uplift_low,uplift_high,incremental_purchases_low,incremental_purchases_high,incremental_revenue_low,incremental_revenue_high
+P1,Checkout Reassurance Message,310249,0.1241,38502.0,0.03,0.05,1155.0,1925.0,46860.66,78101.11
+P2,Product Recommendation Carousel,147445,0.1385,20421.0,0.02,0.04,408.0,817.0,16569.71,33139.41
+P3,Vacuum Delivery Reassurance,12410,0.2575,3196.0,0.03,0.05,96.0,160.0,3823.19,6371.98
+P4,High-price Product Trust Signals,324937,0.0782,25410.0,0.02,0.04,508.0,1016.0,51714.58,103429.16
+P5,Under £5 Checkout Friction,696183,0.1793,124826.0,0.02,0.04,2497.0,4993.0,41866.51,83733.02

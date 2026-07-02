@@ -1,0 +1,5 @@
+metric,definition,used_for
+View-to-cart conversion rate,Cart sessions divided by view sessions,Pre-cart and product discovery experiments
+Cart-to-purchase conversion rate,Purchase sessions divided by cart sessions,Checkout and cart abandonment experiments
+Revenue per session,Total revenue divided by eligible sessions,Commercial impact tracking
+Average order value,Revenue divided by purchase sessions,Guardrail metric
